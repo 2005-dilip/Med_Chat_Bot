@@ -1,0 +1,258 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    width: 70px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.navbar-title {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-menu li {
+    margin-bottom: 20px;
+}
+
+.navbar-menu li a {
+    color: #ecf0f1;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    background-color: #34495e;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-menu li a:hover {
+    background-color: #1abc9c;
+}
+
+.chat-container {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.msger {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 100%;
+    flex-grow: 1;
+    display: none;
+    flex-direction: column;
+}
+
+.msger.active-chat {
+    display: flex;
+}
+
+.msger-header {
+    background: #1abc9c;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 2px solid #16a085;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.msger-header-title {
+    font-size: 1.3rem;
+}
+
+.msger-header-options span {
+    font-size: 1.3rem;
+}
+
+.msger-chat {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.msger-inputarea {
+    display: flex;
+    padding: 15px;
+    border-top: 2px solid #16a085;
+    background: #ecf0f1;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.msger-input {
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 25px;
+    margin-right: 10px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #34495e;
+}
+
+.msger-send-btn {
+    background: #1abc9c;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.msger-send-btn i {
+    font-size: 1.5rem;
+}
+
+.msger-send-btn:hover {
+    background: #16a085;
+}
+
+.msg {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.msg .msg-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.msg .msg-bubble {
+    max-width: 70%;
+    background: #ecf0f1;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.msg .msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.msg .msg-info-name {
+    font-weight: bold;
+}
+
+.msg .msg-info-time {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.right-msg {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.right-msg .msg-bubble {
+    background: #1abc9c;
+    color: #fff;
+}
+
+.left-msg .msg-bubble {
+    background: #ecf0f1;
+}
+
+.typing-indicator {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+
+.typing-indicator {
+    color: #666;
+    font-style: italic;
+}
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.image-preview {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.msg-image {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.medication-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.medication-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.precaution-item, .workout-item, .diet-item {
+  margin-bottom: 5px;
+}
